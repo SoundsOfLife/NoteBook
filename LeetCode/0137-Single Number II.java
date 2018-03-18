@@ -1,7 +1,4 @@
-import java.util.*;
-import java.lang.*;
-
-public class Solution {
+class Solution {
     public int singleNumber(int[] A) {
         int ones = 0, twos = 0;
         for(int i = 0; i < A.length; i++){
