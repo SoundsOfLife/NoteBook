@@ -1,12 +1,4 @@
-// Definition for a binary tree node.
-import java.util.*;
-
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
-import java.lang.*;
-
-public class Solution {
-
+public class Sort {
     public int[] qSort(int[] nums,int left,int right){
         if(left < right){
             int flag = nums[left];

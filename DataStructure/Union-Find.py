@@ -26,7 +26,7 @@ class DisjSet:
         else:
             if self.S[root1] == self.S[root2]:
                 self.S[root1] -= 1
-            self.S[root2] = root1
+            self.S[root1] = root2
 
 
 if __name__ == '__main__':
