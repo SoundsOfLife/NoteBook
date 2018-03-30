@@ -16,20 +16,23 @@ def PartialMatchTable(pattern):
 
 def KMP(target, pattern):
     k = PartialMatchTable(pattern)
+    ans = []
     i = 0
     while i < len(target):
         j = 0
         while i + j < len(target) and j < len(pattern) and target[i + j] == pattern[j]:
             j += 1
         if j == len(pattern):
+            ans.append(i)
             return i
         else:
             if j == 0:
                 i += 1
             else:
                 i += (j - k[j])
-    return -1
+    print(ans)
+    return i
 
 
 if __name__ == '__main__':
-    print(KMP("abababbbbababac", "ababaca"))
+    print(KMP("abababbbbababac", "a"))
